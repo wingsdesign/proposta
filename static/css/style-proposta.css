@@ -1,0 +1,44 @@
+ body{
+	margin: auto;
+	padding: 0;
+	/*width: 1000px;*/
+}
+#geral{
+	width: 1000px;
+	height: auto;
+	padding: 20mm;
+	margin: 15px auto;
+
+}
+.container{
+	width: 251mm;
+	margin: 0 auto;
+	margin-left: -51px;
+	margin-top: -25px;
+}
+
+.img-logo img{
+	margin-top: -20px;
+	float: left;
+}
+.topo{
+	text-align: center;
+	margin-top: -35px;
+}
+.topo p{
+	font-size: 15px;
+}
+.informacao-cliente{
+	margin-top: 20px;
+
+}
+.validade{
+	text-align: left;
+}
+.infor-data{
+	text-align: right;
+}
+p.espaco {
+	padding-left: 40px;
+	padding-top: 10px;
+}

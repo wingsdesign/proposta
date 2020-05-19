@@ -1,0 +1,194 @@
+{% load static %}<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>PROPOSTA - {{ proposta_base.cliente.nome }} - {{ proposta_base.data|date:"d F Y" }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  
+  <link rel="stylesheet" href="{% static 'css/style-proposta.css' %}">
+</head>
+<body>
+<div id="geral">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-12">
+                <div class="img-logo">
+                    <img src="{% static 'images/logo-wingsdesign-proposta.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-12">
+        <div class="topo center">
+            <h3><strong>CONTRATO DE PRESTAÇÃO DE SERVIÇO DE WEBSITE</strong></h3>
+            <h4>WINGS DESIGN - LTDA - CNPJ: 00.000.000/0000-00</h4>
+            <p>Rua:  - Bairro:  - Fone:  <br>
+            Site: www.seudominio.com.br / Email: contato@seudominio.com.br  
+            <br>Cidade - Estado</p>
+
+      </div>
+      </div>
+      </div>
+          <div class="row">
+            <hr>
+            <div class="informacao-cliente">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                  <p> <strong>EMPRESA OU CLIENTE:</strong> {{ proposta_base.cliente.nome|upper }}</p>
+                  {% if proposta_base.cpf %}
+                  <p> <strong>CPF:</strong> {{ proposta_base.cpf }}</p>
+                  {% else %}
+                  <p> <strong>CNPJ:</strong> {{ proposta_base.cnpj }}</p>
+                  {% endif %}
+                  <p> <strong>ENDEREÇO:</strong> {{ proposta_base.endereco|upper }}</p>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                  <p> <strong>BAIRRO:</strong> {{ proposta_base.bairro|upper }}</p>
+                  <p> <strong>CIDADE:</strong> {{ proposta_base.cidade|upper }}</p>
+                  <p> <strong>ESTADO:</strong> {{ proposta_base.get_estado_display|upper  }}</p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="container">
+      <div class="row"><br>
+<hr>
+<strong>I – DO OBJETO DO CONTRATO</strong><br>
+ 
+O presente contrato tem como objeto a formulação do conjunto de páginas eletrônicas e gráficas, aqui denominado simplesmente por” SITE” ou "HOME PAGE", para uso exclusivo na Internet, com referência institucionais da CONTRATANTE, demostrando os seus produtos, serviços e tecnologia. Também incluso a prestação de serviço referente a manutenção deste “SITE”<br>
+<hr>
+<strong>II - DAS OBRIGAÇÕES DA CONTRATADA</strong><br>
+
+ 
+A CONTRATRADA se obriga a desenvolver o objeto deste contrato da maneira mais adequada e dinâmica, dando ênfase a marca e a qualidade dos produtos e serviços da CONTRATANTE. 
+Faz parte ainda os seguintes serviços a serem executados pela CONTRATADA:<br>
+  <p class="espaco">
+- Elaboração do projeto gráfico e fluxo das informações;<br>
+- Programação das páginas em HTML, CSS, JQUERY, JAVA SCRIPT;<br>
+- Programação das páginas em PYTHON E DJANGO;<br>
+- Programação dos bancos de dados necessários;<br>
+- Manutenção do “SITE” assim que as partes acharem necessário.<br>
+</p>
+  <hr>
+ <strong>III - DAS OBRIGAÇÕES DO CONTRATANTE</strong><br>
+
+ 
+Ficará sobre responsabilidade da CONTRATANTE, a entrega de todo o material necessário para execução dos trabalhos ora tais como: <br>
+ <p class="espaco">
+- Fotos e imagens a serem adicionadas nas páginas;<br>
+- Textos descritivos;<br>
+- Logotipo.<br>
+- Vídeos <br>
+ </p>
+O CONTRATANTE deverá efetuar corretamente os pagamentos à CONTRATADA, segundo item V.
+ <hr>
+<strong>IV - DA MANUTENÇÃO DOS SERVIÇOS</strong><br>
+
+A CONTRATADA através da manutenção dos serviços, sendo Preventivo e/ou Corretivo, manterá o “SITE” em condições de navegabilidade, efetuando os necessários ajustes, configurações e reparos visuais.<br>
+ 
+1º. somente os técnicos da CONTRATADA poderão executar serviços técnicos preventivos e ou corretivos, a que se refere esta cláusula.<br>
+
+2º.  As manutenções dos serviços aqui contratados não incluem: <br>
+<p class="espaco">
+- Os serviços adicionais aos mencionados neste contrato;<br>
+- Elaboração e construção de bancos de dados extras;<br>
+- Produção de fotos;<br>
+- Produção de vídeos;<br>
+</p>
+
+3º.  A CONTRATADA se compromete a cadastrar o "SITE" do CONTRATANTE nos principais "SITES" de busca nacionais e internacionais.<br>
+  
+4º. A CONTRATADA, se compromete a hospedagem de 6 meses (seis meses) de hospedagem grátis, a pois o termino dos 6 meses.<br>
+Será cobrado o valor da hospedagem da seguinte forma que o cliente desejar.<br>
+<p class="espaco">
+<b>Mensal</b> de R$ 50,00 (Setenta reais)<br>
+<b>Trimensal</b> de R$ 150,00 - (Duzentos e dez reais)<br>
+<b>Semestral</b> de R$ 300,00 - (Quatrocentos e vinte reais)<br>
+<b>Anual</b> de R$ 600,00 - (Oitocentos e quarenta reais)<br>
+</p>  
+A pois a escolha DA CONTRATADA, a respeito do pagamento do servidor, será atualizado no banco de dados, para que o mesmo seja efetuado automaticamente 05 dias úteis antes do vencimento.<br>
+
+ <hr>
+ <strong>V - PREÇO E FORMA DE PAGAMENTO</strong><br>
+
+Para os serviços de construção, manutenção e inclusão do “SITE”, objeto deste contrato, ora estipulado terá um custo no valor de:<br>
+- Construção: <b>R$ {{proposta_base.valor}}</b> <br>  
+
+- Uma vez que a CONTRATADA cumpra todos os requisitos, o CONTRATANTE efetuará o pagamento do serviço prestado de construção do “SITE” da seguinte forma:<br>
+<p class="espaco">
+{% for item_da_proposta in proposta_base.pagamento_set.all %}
+
+- <b>R$</b> {{item_da_proposta.valor}} <b>( {{item_da_proposta.valor_extenso|capfirst|upper}} )</b>, {{item_da_proposta.descricao|capfirst}}.<br>
+ {% endfor %}
+</p>
+<hr>
+<strong>VI - DA RESCISÃO DO CONTRATUAL</strong><br>
+
+O presente contrato poderá ser rescindido pelo CONTRATANTE, sem ônus algum, quando:<br>
+- A CONTRATADA não executar os serviços solicitados pelo CONTRATANTE, e que estejam de acordo com as cláusulas deste contrato.<br>
+
+- Quando a CONTRATADA descumprir alguma das cláusulas deste contrato.
+ O presente contrato poderá ser rescindido pela CONTRATADA, quando:<br>
+ 
+- O CONTRATANTE na hipótese de inadimplência das obrigações ora assumidas, devendo a parte inocente notificar a parte culpada à sanar sua falha no prazo de 30 dias, após isso, não sanada a dívida, a CONTRATADA não efetuará qualquer tipo de trabalho para o CONTRATANTE.<br>
+ <hr>
+<strong>VII - PRAZO DE VIGÊNCIA DO PRESENTE CONTRATO</strong><br>
+
+Com exceção dos serviços de implantação do sistema o presente contrato vigorará por prazo determinado de 1 (um) ano, podendo ser renovado posteriormente.
+ 
+E, por assim estarem justos e contratados, firmam o presente contrato em duas vias de igual teor e forma.<br>
+<hr>
+<strong>VIII – DADOS DO SITE E ADMINISTRAÇÃO</strong><br> 
+
+  Para acesso a administração do site segue a baixo o site, loguin e senha.<br>
+
+<b>DOMINIO:</b> www.{{proposta_base.dominio}}<br>
+<b>DOMINIO ADMIN:</b> www.{{proposta_base.dominio}}/{{proposta_base.dominio_loguin}}<br>
+<b>LOGUIN:</b> {{proposta_base.loguin}}<br>
+<b>SENHA:</b> {{proposta_base.senha}}<br>
+<b>BANCO DE DADOS:</b> {{proposta_base.loguin}}<br>
+<b>SERVIDOR:</b> Wings Design – DigitalOcean USA<br><br>
+
+<i>Obs. a senha informada para cada um dos itens acima pode ser modificada, por qualquer outra senha.</i><br>
+<hr>
+<strong>IX – SERVIÇOS DE EMAIL’S</strong><br>
+
+<b>EMAIL:</b> email.{{proposta_base.dominio}}<br>
+<b>USUÁRIO ADMIN:</b> contato@{{proposta_base.dominio}}<br>
+<b>SENHA ADMIN:</b> @{{proposta_base.senha}}<br><br>
+
+<i>Obs. a senha informada para cada um dos itens acima pode ser modificada, por qualquer outra senha.</i><br><br>
+
+Poderão ser criadas até 10(dez) contas de E-mails capacidade de 5GB de armazenamentos. As criações de e-mails podem ser feitas através do e-mail principal 
+<b>contato@{{proposta_base.dominio}}</b> 
+Onde o Administrador pode adicionar, remover, bloquear, editar e excluir.<br>
+
+<hr>
+<strong><i>Nota: À Wings Design, tem total Sigilo com dados do seu cliente, se de fato o cliente, esquecer a senha, ou loguin. Você pode entrar em contato conosco, através de telefone ou E-mail.
+À Wings Design, também dá treinamento para que o cliente mesmo possa está atualizando seu próprio Website.</i></strong> 
+<br>
+<hr>
+<div class="validade"><i></i>Proposta válida por {{ proposta_base.get_validade_display }} dias</div><br> 
+
+<div class="infor-data">IMPERATRIZ - MA - {{ proposta_base.data|date|upper }}</div></b><br>
+
+<div class="separador text-center">
+_________________________________________ <br> 
+WINGS DESIGN LTDA <br> 
+<p>CNPJ: 00.000.000/0000-00</p>
+
+
+_________________________________________<br> 
+{{proposta_base.cliente.nome}}<br> 
+{% if proposta_base.cpf %}
+  <p>CPF: {{ proposta_base.cpf }}</p>
+{% else %}
+  <p>CNPJ: {{ proposta_base.cnpj }}</p>
+{% endif %}
+
+      </div>
+</div>
+    </div>
+</div>
+</body>
+</html>
